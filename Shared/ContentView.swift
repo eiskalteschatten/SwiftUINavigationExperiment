@@ -11,19 +11,22 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 15.0) {
             Button("Open Window Type 1", action: {
-                // TODO: open the window on macOS; open the tabview on iOS and open the correct view in a new tab
+                // TODO:
+                // - macOS: open the window
+                // - iPadOS: open the tabview and open the correct view in a new tab
+                // - iOS: figure out the best means of navigation
             })
             
             Button("Open Window Type 2", action: {
-                // TODO: open the window on macOS; open the tabview on iOS and open the correct view in a new tab
+                // TODO
             })
             
             Button("Open Window Type 3", action: {
-                // TODO: open the window on macOS; open the tabview on iOS and open the correct view in a new tab
+                // TODO
             })
             
             Button("Open Window Type 4", action: {
-                // TODO: open the window on macOS; open the tabview on iOS and open the correct view in a new tab
+                // TODO
             })
         }
         .padding()
