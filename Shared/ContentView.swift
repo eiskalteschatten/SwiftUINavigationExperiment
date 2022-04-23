@@ -9,8 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(spacing: 15.0) {
+            Button("Open Window Type 1", action: {
+                // TODO: open the window on macOS; open the tabview on iOS and open the correct view in a new tab
+            })
+            
+            Button("Open Window Type 2", action: {
+                // TODO: open the window on macOS; open the tabview on iOS and open the correct view in a new tab
+            })
+            
+            Button("Open Window Type 3", action: {
+                // TODO: open the window on macOS; open the tabview on iOS and open the correct view in a new tab
+            })
+            
+            Button("Open Window Type 4", action: {
+                // TODO: open the window on macOS; open the tabview on iOS and open the correct view in a new tab
+            })
+        }
+        .padding()
+        .frame(minWidth: 200)
     }
 }
 
