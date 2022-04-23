@@ -12,7 +12,7 @@ struct ContentView: View {
         VStack(spacing: 15.0) {
             Button("Open Window Type 1", action: {
                 // TODO:
-                // - macOS: open the window
+                // - macOS: open the view in a new window
                 // - iPadOS: open the tabview and open the correct view in a new tab
                 // - iOS: figure out the best means of navigation
                 
@@ -23,15 +23,24 @@ struct ContentView: View {
             })
             
             Button("Open Window Type 2", action: {
-                // TODO
+                #if os(macOS)
+                let window = WindowManager()
+                window.openWindow(contentView: WindowType2View(), title: "Window Type 2", autosaveName: "WindowType2")
+                #endif
             })
             
             Button("Open Window Type 3", action: {
-                // TODO
+                #if os(macOS)
+                let window = WindowManager()
+                window.openWindow(contentView: WindowType3View(), title: "Window Type 3", autosaveName: "WindowType3")
+                #endif
             })
             
             Button("Open Window Type 4", action: {
-                // TODO
+                #if os(macOS)
+                let window = WindowManager()
+                window.openWindow(contentView: WindowType4View(), title: "Window Type 4", autosaveName: "WindowType4")
+                #endif
             })
         }
         .padding()
