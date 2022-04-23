@@ -15,6 +15,11 @@ struct ContentView: View {
                 // - macOS: open the window
                 // - iPadOS: open the tabview and open the correct view in a new tab
                 // - iOS: figure out the best means of navigation
+                
+                #if os(macOS)
+                let window = WindowType1Manager()
+                window.openWindow()
+                #endif
             })
             
             Button("Open Window Type 2", action: {
