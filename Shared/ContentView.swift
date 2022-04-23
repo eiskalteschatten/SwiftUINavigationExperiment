@@ -19,6 +19,13 @@ struct ContentView: View {
                 #if os(macOS)
                 let window = WindowManager()
                 window.openWindow(contentView: WindowType1View(), title: "Window Type 1", autosaveName: "WindowType1")
+                #else
+                if UIDevice.current.userInterfaceIdiom == .pad {
+                    // TODO: iPad
+                }
+                else {
+                    // TODO: iPhone
+                }
                 #endif
             })
             
