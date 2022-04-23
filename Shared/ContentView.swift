@@ -17,8 +17,8 @@ struct ContentView: View {
                 // - iOS: figure out the best means of navigation
                 
                 #if os(macOS)
-                let window = WindowType1Manager()
-                window.openWindow()
+                let window = WindowManager()
+                window.openWindow(contentView: WindowType1View(), title: "Window Type 1", autosaveName: "WindowType1")
                 #endif
             })
             

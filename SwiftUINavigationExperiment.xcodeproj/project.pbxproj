@@ -17,7 +17,7 @@
 		9385E8442814A1C200781D76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E81A2814A1BF00781D76 /* ContentView.swift */; };
 		9385E8452814A1C200781D76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9385E81B2814A1C100781D76 /* Assets.xcassets */; };
 		9385E8462814A1C200781D76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9385E81B2814A1C100781D76 /* Assets.xcassets */; };
-		9385E8572814A5FA00781D76 /* WindowType1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E8562814A5FA00781D76 /* WindowType1.swift */; };
+		9385E8572814A5FA00781D76 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E8562814A5FA00781D76 /* WindowManager.swift */; };
 		9385E85A2814A69C00781D76 /* WindowType1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E8592814A69C00781D76 /* WindowType1View.swift */; };
 		9385E85B2814A69C00781D76 /* WindowType1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E8592814A69C00781D76 /* WindowType1View.swift */; };
 /* End PBXBuildFile section */
@@ -52,7 +52,7 @@
 		9385E8392814A1C200781D76 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9385E83D2814A1C200781D76 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		9385E83F2814A1C200781D76 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
-		9385E8562814A5FA00781D76 /* WindowType1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowType1.swift; sourceTree = "<group>"; };
+		9385E8562814A5FA00781D76 /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
 		9385E8592814A69C00781D76 /* WindowType1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowType1View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,8 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				9385E8582814A67600781D76 /* WindowViews */,
-				9385E8552814A5E000781D76 /* Windows */,
 				9385E8192814A1BF00781D76 /* SwiftUINavigationExperimentApp.swift */,
+				9385E8562814A5FA00781D76 /* WindowManager.swift */,
 				9385E81A2814A1BF00781D76 /* ContentView.swift */,
 				9385E81B2814A1C100781D76 /* Assets.xcassets */,
 			);
@@ -146,14 +146,6 @@
 				9385E83F2814A1C200781D76 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
-			sourceTree = "<group>";
-		};
-		9385E8552814A5E000781D76 /* Windows */ = {
-			isa = PBXGroup;
-			children = (
-				9385E8562814A5FA00781D76 /* WindowType1.swift */,
-			);
-			path = Windows;
 			sourceTree = "<group>";
 		};
 		9385E8582814A67600781D76 /* WindowViews */ = {
@@ -333,7 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9385E8442814A1C200781D76 /* ContentView.swift in Sources */,
-				9385E8572814A5FA00781D76 /* WindowType1.swift in Sources */,
+				9385E8572814A5FA00781D76 /* WindowManager.swift in Sources */,
 				9385E85B2814A69C00781D76 /* WindowType1View.swift in Sources */,
 				9385E8422814A1C200781D76 /* SwiftUINavigationExperimentApp.swift in Sources */,
 			);
