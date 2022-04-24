@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+// TODO:
+// - Generate the buttons and views dynamically from a data source
+
 struct ContentView: View {
     #if os(iOS)
     private enum Screen: Int {
@@ -20,38 +23,23 @@ struct ContentView: View {
         #if os(macOS)
             VStack(spacing: 15.0) {
                 Button("Open Window Type 1", action: {
-                    // TODO:
-                    // - macOS: open the view in a new window
-                    // - iOS: replace the ContentView
-                    // - Generate the buttons and views dynamically from a data source
-                    
-                    #if os(macOS)
                     let window = WindowManager()
                     window.openWindow(contentView: WindowView(text: "Window Type 1"), title: "Window Type 1", autosaveName: "WindowType1")
-                    #else
-                    
-                    #endif
                 })
                 
                 Button("Open Window Type 2", action: {
-                    #if os(macOS)
                     let window = WindowManager()
                     window.openWindow(contentView: WindowView(text: "Window Type 2"), title: "Window Type 2", autosaveName: "WindowType2")
-                    #endif
                 })
                 
                 Button("Open Window Type 3", action: {
-                    #if os(macOS)
                     let window = WindowManager()
                     window.openWindow(contentView: WindowView(text: "Window Type 3"), title: "Window Type 3", autosaveName: "WindowType3")
-                    #endif
                 })
                 
                 Button("Open Window Type 4", action: {
-                    #if os(macOS)
                     let window = WindowManager()
                     window.openWindow(contentView: WindowView(text: "Window Type 4"), title: "Window Type 4", autosaveName: "WindowType4")
-                    #endif
                 })
             }
             .padding()
