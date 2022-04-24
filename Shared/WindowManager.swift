@@ -23,7 +23,6 @@ class WindowManager {
         window!.setFrameAutosaveName(autosaveName)
         window!.title = title
         window!.isReleasedWhenClosed = false
-
         window!.contentView = NSHostingView(rootView: contentView)
         window!.makeKeyAndOrderFront(nil)
     }

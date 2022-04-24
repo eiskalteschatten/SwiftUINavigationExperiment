@@ -26,6 +26,8 @@
 		9385E8612814A8C300781D76 /* WindowType3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E85F2814A8C300781D76 /* WindowType3View.swift */; };
 		9385E8632814A8CE00781D76 /* WindowType4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E8622814A8CE00781D76 /* WindowType4View.swift */; };
 		9385E8642814A8CE00781D76 /* WindowType4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E8622814A8CE00781D76 /* WindowType4View.swift */; };
+		9385E8662815609D00781D76 /* WindowSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E8652815609D00781D76 /* WindowSubView.swift */; };
+		9385E8672815609D00781D76 /* WindowSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E8652815609D00781D76 /* WindowSubView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,7 @@
 		9385E85C2814A8B900781D76 /* WindowType2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowType2View.swift; sourceTree = "<group>"; };
 		9385E85F2814A8C300781D76 /* WindowType3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowType3View.swift; sourceTree = "<group>"; };
 		9385E8622814A8CE00781D76 /* WindowType4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowType4View.swift; sourceTree = "<group>"; };
+		9385E8652815609D00781D76 /* WindowSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowSubView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,7 @@
 				9385E85C2814A8B900781D76 /* WindowType2View.swift */,
 				9385E85F2814A8C300781D76 /* WindowType3View.swift */,
 				9385E8622814A8CE00781D76 /* WindowType4View.swift */,
+				9385E8652815609D00781D76 /* WindowSubView.swift */,
 			);
 			path = WindowViews;
 			sourceTree = "<group>";
@@ -328,6 +332,7 @@
 			files = (
 				9385E8432814A1C200781D76 /* ContentView.swift in Sources */,
 				9385E8632814A8CE00781D76 /* WindowType4View.swift in Sources */,
+				9385E8662815609D00781D76 /* WindowSubView.swift in Sources */,
 				9385E8412814A1C200781D76 /* SwiftUINavigationExperimentApp.swift in Sources */,
 				9385E8602814A8C300781D76 /* WindowType3View.swift in Sources */,
 				9385E85A2814A69C00781D76 /* WindowType1View.swift in Sources */,
@@ -342,6 +347,7 @@
 				9385E8642814A8CE00781D76 /* WindowType4View.swift in Sources */,
 				9385E8612814A8C300781D76 /* WindowType3View.swift in Sources */,
 				9385E85E2814A8B900781D76 /* WindowType2View.swift in Sources */,
+				9385E8672815609D00781D76 /* WindowSubView.swift in Sources */,
 				9385E8442814A1C200781D76 /* ContentView.swift in Sources */,
 				9385E8572814A5FA00781D76 /* WindowManager.swift in Sources */,
 				9385E85B2814A69C00781D76 /* WindowType1View.swift in Sources */,
