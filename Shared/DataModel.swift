@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DataModel {
+struct DataModel: Hashable {
     var id: Int
     var title: String
 }
