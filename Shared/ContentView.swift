@@ -8,24 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    #if os(iOS)
+    
+    #endif
+    
     var body: some View {
         VStack(spacing: 15.0) {
             Button("Open Window Type 1", action: {
                 // TODO:
                 // - macOS: open the view in a new window
-                // - iPadOS: open the tabview and open the correct view in a new tab
-                // - iOS: figure out the best means of navigation
+                // - iOS: replace the ContentView
+                // - Generate the buttons and views dynamically from a data source
                 
                 #if os(macOS)
                 let window = WindowManager()
                 window.openWindow(contentView: WindowType1View(), title: "Window Type 1", autosaveName: "WindowType1")
                 #else
-                if UIDevice.current.userInterfaceIdiom == .pad {
-                    // TODO: iPad
-                }
-                else {
-                    // TODO: iPhone
-                }
+                
                 #endif
             })
             
