@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-// TODO: animate the opening of a view on iOS
-
 struct ContentView: View {
     @State private var item: DataModel?
     let dataItems = getData()
@@ -29,15 +27,19 @@ struct ContentView: View {
         #else
         if item != nil {
             WindowView(item: $item).navigationTitle(item?.title ?? "")
+                .transition(.scale)
         }
         else {
             VStack(spacing: 15.0) {
                 ForEach(dataItems, id: \.self) { dataItem in
                     Button(dataItem.title, action: {
-                        item = dataItem
+                        withAnimation {
+                            item = dataItem
+                        }
                     })
                 }
             }
+            .transition(.scale)
         }
         #endif
     }

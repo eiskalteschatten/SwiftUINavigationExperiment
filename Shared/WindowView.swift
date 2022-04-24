@@ -34,7 +34,9 @@ struct WindowView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button {
-                            item = nil
+                            withAnimation {
+                                item = nil
+                            }
                         } label: {
                             HStack(spacing: 5) {
                                 Image(systemName: "chevron.left")
