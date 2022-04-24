@@ -10,19 +10,17 @@ import SwiftUI
 // TODO: animate the opening of a view on iOS
 
 struct ContentView: View {
-    #if os(iOS)
     @State private var item: DataModel?
-    #endif
-    
     let dataItems = getData()
     
     var body: some View {
         #if os(macOS)
             VStack(spacing: 15.0) {
-                ForEach(dataItems, id: \.self) { item in
-                    Button(item.title, action: {
+                ForEach(dataItems, id: \.self) { dataItem in
+                    Button(dataItem.title, action: {
+                        item = dataItem
                         let window = WindowManager()
-                        window.openWindow(contentView: WindowView(text: item.title), title: item.title, autosaveName: "WindowType\(item.id)")
+                        window.openWindow(contentView: WindowView(item: $item), title: dataItem.title, autosaveName: "WindowType\(dataItem.id)")
                     })
                 }
             }
