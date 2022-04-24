@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     #if os(iOS)
     private enum Screen: Int {
-        case views, view
+        case views, view1, view2, view3, view4
     }
     
     @State private var screen: Screen?
@@ -27,7 +27,7 @@ struct ContentView: View {
                     
                     #if os(macOS)
                     let window = WindowManager()
-                    window.openWindow(contentView: WindowType1View(), title: "Window Type 1", autosaveName: "WindowType1")
+                    window.openWindow(contentView: WindowView(text: "Window Type 1"), title: "Window Type 1", autosaveName: "WindowType1")
                     #else
                     
                     #endif
@@ -36,21 +36,21 @@ struct ContentView: View {
                 Button("Open Window Type 2", action: {
                     #if os(macOS)
                     let window = WindowManager()
-                    window.openWindow(contentView: WindowType2View(), title: "Window Type 2", autosaveName: "WindowType2")
+                    window.openWindow(contentView: WindowView(text: "Window Type 2"), title: "Window Type 2", autosaveName: "WindowType2")
                     #endif
                 })
                 
                 Button("Open Window Type 3", action: {
                     #if os(macOS)
                     let window = WindowManager()
-                    window.openWindow(contentView: WindowType3View(), title: "Window Type 3", autosaveName: "WindowType3")
+                    window.openWindow(contentView: WindowView(text: "Window Type 3"), title: "Window Type 3", autosaveName: "WindowType3")
                     #endif
                 })
                 
                 Button("Open Window Type 4", action: {
                     #if os(macOS)
                     let window = WindowManager()
-                    window.openWindow(contentView: WindowType4View(), title: "Window Type 4", autosaveName: "WindowType4")
+                    window.openWindow(contentView: WindowView(text: "Window Type 4"), title: "Window Type 4", autosaveName: "WindowType4")
                     #endif
                 })
             }
@@ -60,8 +60,8 @@ struct ContentView: View {
         NavigationView {
             VStack(spacing: 15.0) {
                 NavigationLink(
-                    destination: WindowType1View().navigationTitle("Window Type 1"),
-                    tag: Screen.view,
+                    destination: WindowView(text: "Window Type 1").navigationTitle("Window Type 1"),
+                    tag: Screen.view1,
                     selection: $screen,
                     label: {
                         Text("Window Type 1")
@@ -69,8 +69,8 @@ struct ContentView: View {
                 )
                 
                 NavigationLink(
-                    destination: WindowType2View().navigationTitle("Window Type 2"),
-                    tag: Screen.view,
+                    destination: WindowView(text: "Window Type 2").navigationTitle("Window Type 2"),
+                    tag: Screen.view2,
                     selection: $screen,
                     label: {
                         Text("Window Type 2")
@@ -78,8 +78,8 @@ struct ContentView: View {
                 )
                 
                 NavigationLink(
-                    destination: WindowType3View().navigationTitle("Window Type 3"),
-                    tag: Screen.view,
+                    destination: WindowView(text: "Window Type 3").navigationTitle("Window Type 3"),
+                    tag: Screen.view3,
                     selection: $screen,
                     label: {
                         Text("Window Type 3")
@@ -87,8 +87,8 @@ struct ContentView: View {
                 )
                 
                 NavigationLink(
-                    destination: WindowType4View().navigationTitle("Window Type 4"),
-                    tag: Screen.view,
+                    destination: WindowView(text: "Window Type 4").navigationTitle("Window Type 4"),
+                    tag: Screen.view4,
                     selection: $screen,
                     label: {
                         Text("Window Type 4")

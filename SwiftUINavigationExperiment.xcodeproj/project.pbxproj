@@ -18,14 +18,8 @@
 		9385E8452814A1C200781D76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9385E81B2814A1C100781D76 /* Assets.xcassets */; };
 		9385E8462814A1C200781D76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9385E81B2814A1C100781D76 /* Assets.xcassets */; };
 		9385E8572814A5FA00781D76 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E8562814A5FA00781D76 /* WindowManager.swift */; };
-		9385E85A2814A69C00781D76 /* WindowType1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E8592814A69C00781D76 /* WindowType1View.swift */; };
-		9385E85B2814A69C00781D76 /* WindowType1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E8592814A69C00781D76 /* WindowType1View.swift */; };
-		9385E85D2814A8B900781D76 /* WindowType2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E85C2814A8B900781D76 /* WindowType2View.swift */; };
-		9385E85E2814A8B900781D76 /* WindowType2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E85C2814A8B900781D76 /* WindowType2View.swift */; };
-		9385E8602814A8C300781D76 /* WindowType3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E85F2814A8C300781D76 /* WindowType3View.swift */; };
-		9385E8612814A8C300781D76 /* WindowType3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E85F2814A8C300781D76 /* WindowType3View.swift */; };
-		9385E8632814A8CE00781D76 /* WindowType4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E8622814A8CE00781D76 /* WindowType4View.swift */; };
-		9385E8642814A8CE00781D76 /* WindowType4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E8622814A8CE00781D76 /* WindowType4View.swift */; };
+		9385E85A2814A69C00781D76 /* WindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E8592814A69C00781D76 /* WindowView.swift */; };
+		9385E85B2814A69C00781D76 /* WindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E8592814A69C00781D76 /* WindowView.swift */; };
 		9385E8662815609D00781D76 /* WindowSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E8652815609D00781D76 /* WindowSubView.swift */; };
 		9385E8672815609D00781D76 /* WindowSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E8652815609D00781D76 /* WindowSubView.swift */; };
 /* End PBXBuildFile section */
@@ -61,10 +55,7 @@
 		9385E83D2814A1C200781D76 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		9385E83F2814A1C200781D76 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		9385E8562814A5FA00781D76 /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
-		9385E8592814A69C00781D76 /* WindowType1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowType1View.swift; sourceTree = "<group>"; };
-		9385E85C2814A8B900781D76 /* WindowType2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowType2View.swift; sourceTree = "<group>"; };
-		9385E85F2814A8C300781D76 /* WindowType3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowType3View.swift; sourceTree = "<group>"; };
-		9385E8622814A8CE00781D76 /* WindowType4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowType4View.swift; sourceTree = "<group>"; };
+		9385E8592814A69C00781D76 /* WindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowView.swift; sourceTree = "<group>"; };
 		9385E8652815609D00781D76 /* WindowSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowSubView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,8 +105,9 @@
 		9385E8182814A1BF00781D76 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				9385E8582814A67600781D76 /* WindowViews */,
 				9385E8192814A1BF00781D76 /* SwiftUINavigationExperimentApp.swift */,
+				9385E8592814A69C00781D76 /* WindowView.swift */,
+				9385E8652815609D00781D76 /* WindowSubView.swift */,
 				9385E8562814A5FA00781D76 /* WindowManager.swift */,
 				9385E81A2814A1BF00781D76 /* ContentView.swift */,
 				9385E81B2814A1C100781D76 /* Assets.xcassets */,
@@ -158,18 +150,6 @@
 				9385E83F2814A1C200781D76 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
-			sourceTree = "<group>";
-		};
-		9385E8582814A67600781D76 /* WindowViews */ = {
-			isa = PBXGroup;
-			children = (
-				9385E8592814A69C00781D76 /* WindowType1View.swift */,
-				9385E85C2814A8B900781D76 /* WindowType2View.swift */,
-				9385E85F2814A8C300781D76 /* WindowType3View.swift */,
-				9385E8622814A8CE00781D76 /* WindowType4View.swift */,
-				9385E8652815609D00781D76 /* WindowSubView.swift */,
-			);
-			path = WindowViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,12 +311,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9385E8432814A1C200781D76 /* ContentView.swift in Sources */,
-				9385E8632814A8CE00781D76 /* WindowType4View.swift in Sources */,
 				9385E8662815609D00781D76 /* WindowSubView.swift in Sources */,
 				9385E8412814A1C200781D76 /* SwiftUINavigationExperimentApp.swift in Sources */,
-				9385E8602814A8C300781D76 /* WindowType3View.swift in Sources */,
-				9385E85A2814A69C00781D76 /* WindowType1View.swift in Sources */,
-				9385E85D2814A8B900781D76 /* WindowType2View.swift in Sources */,
+				9385E85A2814A69C00781D76 /* WindowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,13 +321,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9385E8642814A8CE00781D76 /* WindowType4View.swift in Sources */,
-				9385E8612814A8C300781D76 /* WindowType3View.swift in Sources */,
-				9385E85E2814A8B900781D76 /* WindowType2View.swift in Sources */,
 				9385E8672815609D00781D76 /* WindowSubView.swift in Sources */,
 				9385E8442814A1C200781D76 /* ContentView.swift in Sources */,
 				9385E8572814A5FA00781D76 /* WindowManager.swift in Sources */,
-				9385E85B2814A69C00781D76 /* WindowType1View.swift in Sources */,
+				9385E85B2814A69C00781D76 /* WindowView.swift in Sources */,
 				9385E8422814A1C200781D76 /* SwiftUINavigationExperimentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
