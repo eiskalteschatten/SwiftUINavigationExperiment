@@ -17,9 +17,13 @@ struct ContentView: View {
                 ForEach(dataItems, id: \.self) { dataItem in
                     Button(dataItem.title, action: {
                         item = dataItem
-                        let window = WindowManager()
-                        window.openWindow(contentView: WindowView(item: $item), title: dataItem.title, autosaveName: "WindowType\(dataItem.id)")
                     })
+                }
+            }
+            .onChange(of: item) { selectedItem in
+                if let unwrappedItem = selectedItem {
+                    let window = WindowManager()
+                    window.openWindow(contentView: WindowView(item: $item), title: unwrappedItem.title, autosaveName: "WindowType\(unwrappedItem.id)")
                 }
             }
             .padding()
