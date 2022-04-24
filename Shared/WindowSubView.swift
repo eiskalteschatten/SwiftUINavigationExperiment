@@ -28,7 +28,6 @@ struct WindowSubView: View {
                 }
             )
         }
-        .listStyle(.plain)
     }
 }
 

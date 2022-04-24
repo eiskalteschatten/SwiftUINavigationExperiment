@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     #if os(iOS)
-    @State private var screen: Int?
+    @State private var item: DataModel?
     #endif
     
     let dataItems = getData()
@@ -27,20 +27,33 @@ struct ContentView: View {
             .padding()
             .frame(minWidth: 200)
         #else
-        NavigationView {
+        if let unwrappedItem = item {
+            WindowView(text: unwrappedItem.title).navigationTitle(unwrappedItem.title)
+        }
+        else {
             VStack(spacing: 15.0) {
-                ForEach(dataItems, id: \.self) { item in
-                    NavigationLink(
-                        destination: WindowView(text: item.title).navigationTitle(item.title),
-                        tag: item.id,
-                        selection: $screen,
-                        label: {
-                            Text(item.title)
-                        }
-                    )
+                ForEach(dataItems, id: \.self) { dataItem in
+                    Button(dataItem.title, action: {
+                        item = dataItem
+                    })
                 }
             }
         }
+        
+//        NavigationView {
+//            VStack(spacing: 15.0) {
+//                ForEach(dataItems, id: \.self) { item in
+//                    NavigationLink(
+//                        destination: WindowView(text: item.title).navigationTitle(item.title),
+//                        tag: item.id,
+//                        selection: $screen,
+//                        label: {
+//                            Text(item.title)
+//                        }
+//                    )
+//                }
+//            }
+//        }
         #endif
     }
 }

@@ -10,22 +10,6 @@ import SwiftUI
 struct WindowView: View {
     var text: String
     
-    var body: some View {
-        #if os(macOS)
-        NavigationView {
-            NavigationList(text: text)
-            Text("Select something")
-            Text("Select something else")
-        }
-        #else
-        NavigationList(text: text)
-        #endif
-    }
-}
-
-fileprivate struct NavigationList: View {
-    var text: String
-    
     private enum Screen: Int {
         case test
     }
@@ -33,15 +17,21 @@ fileprivate struct NavigationList: View {
     @State private var screen: Screen?
     
     var body: some View {
-        List {
-            NavigationLink(
-                destination: WindowSubView(text: text).navigationTitle("Test"),
-                tag: Screen.test,
-                selection: $screen,
-                label: {
-                    Label("Test", systemImage: "books.vertical")
-                }
-            )
+        NavigationView {
+            List {
+                NavigationLink(
+                    destination: WindowSubView(text: text).navigationTitle("Test"),
+                    tag: Screen.test,
+                    selection: $screen,
+                    label: {
+                        Label("Test", systemImage: "books.vertical")
+                    }
+                )
+            }
+            .navigationBarTitle(text)
+            
+            Text("Select something")
+            Text("Select something else")
         }
     }
 }
