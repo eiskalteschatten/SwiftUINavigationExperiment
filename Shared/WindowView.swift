@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WindowView: View {
-    var text: String
+    @Binding var item: DataModel?
     
     private enum Screen: Int {
         case test
@@ -17,27 +17,46 @@ struct WindowView: View {
     @State private var screen: Screen?
     
     var body: some View {
-        NavigationView {
-            List {
-                NavigationLink(
-                    destination: WindowSubView(text: text).navigationTitle("Test"),
-                    tag: Screen.test,
-                    selection: $screen,
-                    label: {
-                        Label("Test", systemImage: "books.vertical")
+        if let unwrappedItem = item {
+            NavigationView {
+                List {
+                    NavigationLink(
+                        destination: WindowSubView(text: unwrappedItem.title).navigationTitle("Test"),
+                        tag: Screen.test,
+                        selection: $screen,
+                        label: {
+                            Label("Test", systemImage: "books.vertical")
+                        }
+                    )
+                }
+                #if os(iOS)
+                .navigationBarTitle(unwrappedItem.title)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button {
+                            item = nil
+                        } label: {
+                            HStack(spacing: 5) {
+                                Image(systemName: "chevron.left")
+                                    .font(Font.system(size: 15, weight: .bold))
+                                Text("All Views")
+                            }
+                        }
                     }
-                )
+                }
+                #endif
+                
+                Text("Select something")
+                Text("Select something else")
             }
-            .navigationBarTitle(text)
-            
-            Text("Select something")
-            Text("Select something else")
         }
     }
 }
 
 struct WindowView_Previews: PreviewProvider {
+    @State static var item: DataModel? = DataModel(id: 1, title: "Preview")
+    
     static var previews: some View {
-        WindowView(text: "Preview")
+        WindowView(item: $item)
     }
 }

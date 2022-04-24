@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// TODO: animate the opening of a view on iOS
+
 struct ContentView: View {
     #if os(iOS)
     @State private var item: DataModel?
@@ -27,8 +29,8 @@ struct ContentView: View {
             .padding()
             .frame(minWidth: 200)
         #else
-        if let unwrappedItem = item {
-            WindowView(text: unwrappedItem.title).navigationTitle(unwrappedItem.title)
+        if item != nil {
+            WindowView(item: $item).navigationTitle(item?.title ?? "")
         }
         else {
             VStack(spacing: 15.0) {
@@ -39,21 +41,6 @@ struct ContentView: View {
                 }
             }
         }
-        
-//        NavigationView {
-//            VStack(spacing: 15.0) {
-//                ForEach(dataItems, id: \.self) { item in
-//                    NavigationLink(
-//                        destination: WindowView(text: item.title).navigationTitle(item.title),
-//                        tag: item.id,
-//                        selection: $screen,
-//                        label: {
-//                            Text(item.title)
-//                        }
-//                    )
-//                }
-//            }
-//        }
         #endif
     }
 }
