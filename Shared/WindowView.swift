@@ -40,7 +40,7 @@ struct WindowView: View {
                         } label: {
                             HStack(spacing: 5) {
                                 Image(systemName: "chevron.left")
-                                    .font(Font.system(size: 15, weight: .bold))
+                                    .font(Font.system(size: 17, weight: .semibold))
                                 Text("All Views")
                             }
                         }
