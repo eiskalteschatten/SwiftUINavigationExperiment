@@ -15,10 +15,10 @@ struct WindowType1View: View {
     @State private var screen: Screen?
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             List {
                 NavigationLink(
-                    destination: WindowSubView(text: "Window Type 1!"),
+                    destination: WindowSubView(text: "Window Type 1!").navigationTitle("Test"),
                     tag: Screen.test,
                     selection: $screen,
                     label: {
@@ -30,7 +30,7 @@ struct WindowType1View: View {
             Text("Select something")
             
             Text("Select something else")
-        }
+//        }
     }
 }
 

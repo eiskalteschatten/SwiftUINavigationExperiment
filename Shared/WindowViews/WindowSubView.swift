@@ -20,7 +20,7 @@ struct WindowSubView: View {
     var body: some View {
         List {
             NavigationLink(
-                destination: Text(text),
+                destination: Text(text).navigationTitle(text),
                 tag: Screen.test,
                 selection: $screen,
                 label: {
@@ -28,6 +28,7 @@ struct WindowSubView: View {
                 }
             )
         }
+        .listStyle(.plain)
     }
 }
 
