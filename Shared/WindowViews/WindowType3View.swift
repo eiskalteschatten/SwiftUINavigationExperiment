@@ -8,9 +8,29 @@
 import SwiftUI
 
 struct WindowType3View: View {
+    private enum Screen: Int {
+        case test
+    }
+    
+    @State private var screen: Screen?
+    
     var body: some View {
-        Text("Window Type 3!")
-            .frame(minWidth: 200, minHeight: 100)
+        NavigationView {
+            List {
+                NavigationLink(
+                    destination: WindowSubView(text: "Window Type 3!"),
+                    tag: Screen.test,
+                    selection: $screen,
+                    label: {
+                        Label("Test", systemImage: "macwindow")
+                    }
+                )
+            }
+
+            Text("Select something")
+            
+            Text("Select something else")
+        }
     }
 }
 
